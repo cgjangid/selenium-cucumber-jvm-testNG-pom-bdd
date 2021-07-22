@@ -3,10 +3,8 @@ package com.actoJava.qa.stepDefinitions;
 import com.actoJava.qa.factory.DriverFactory;
 import com.actoJava.qa.pages.LoginPage;
 import com.actoJava.qa.pages.UserRegisterPage;
-import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 
 public class userRegistrationSteps {
