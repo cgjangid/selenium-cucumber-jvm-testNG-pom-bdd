@@ -1,6 +1,7 @@
 package com.actoJava.qa.stepDefinitions.base;
 
 import com.actoJava.qa.factory.DriverFactory;
+import com.actoJava.qa.pages.HomePage;
 import com.actoJava.qa.util.PropertyReader;
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
@@ -8,7 +9,6 @@ import io.cucumber.java.Scenario;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
-import org.testng.Reporter;
 
 import java.util.Properties;
 
@@ -18,6 +18,7 @@ public class BaseTest {
     private WebDriver driver;
     private Properties prop;
     private DriverFactory driverFactory;
+    private HomePage homePage;
 
     @Before
     public void setup() {
@@ -41,6 +42,5 @@ public class BaseTest {
         }
         PropertyReader.cleanUp();
         driver.quit();
-        Reporter.log("======Browser Closed======");
     }
 }

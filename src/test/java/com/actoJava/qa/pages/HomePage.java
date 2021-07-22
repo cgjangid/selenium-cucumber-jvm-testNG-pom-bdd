@@ -9,19 +9,19 @@ public class HomePage {
 
     // object repository for home page
     @FindBy(xpath = "//*[@id=\"userDropdown\"]/span")
-    WebElement loggedInUserName;
+    private WebElement loggedInUserName;
 
     @FindBy(xpath = "//*[@id=\"content\"]/div/div[1]/h1")
-    WebElement homePageHeader;
+    private WebElement homePageHeader;
 
     @FindBy(xpath = "//*[@id=\"accordionSidebar\"]/li[6]/a")
-    WebElement linkForTablesPage;
+    private WebElement linkForTablesPage;
 
     @FindBy(xpath = "//*[@id=\"content\"]/nav/ul/li[4]/div/a[4]")
-    WebElement logoutLink;
+    private WebElement logoutLink;
 
     @FindBy(xpath = "//*[@id=\"logoutModal\"]/div/div/div[3]/a")
-    WebElement logoutButtonInPopup;
+    private WebElement logoutButtonInPopup;
 
     private WebDriver driver;
 

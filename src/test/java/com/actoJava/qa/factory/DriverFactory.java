@@ -9,7 +9,6 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.opera.OperaDriver;
 import org.openqa.selenium.safari.SafariDriver;
-import org.testng.Reporter;
 
 import java.util.concurrent.TimeUnit;
 
@@ -44,7 +43,6 @@ public class DriverFactory {
                 tlDriver.set(new InternetExplorerDriver());
                 break;
         }
-        Reporter.log("======Launch Browser======", true);
 
         getDriver().manage().deleteAllCookies();
         getDriver().manage().window().maximize();

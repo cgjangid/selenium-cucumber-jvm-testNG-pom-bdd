@@ -6,7 +6,7 @@ Feature: User Registration Feature
     Then User Registration page is displayed
 
   Scenario Outline: If valid user details are provided on User Registration Page and clicked on Register Account button, user is registered successfully
-    When Valid <firstName>, <lastName>, <emailId> and <userPassword> details are provided on Registration Page and clicked on Register Account Button
+    When User details of <firstName>, <lastName>, <emailId> and <userPassword> are provided on Registration Page and clicked on Register Account Button
     Then User is registered successfully
 
     Examples:
@@ -15,11 +15,13 @@ Feature: User Registration Feature
 #      | user2     | last2    | test2@dummy.xyza | password |
 #      | user3     | last2    | test2@dummy.xyza | password |
 #      | user4     | last2    | test2@dummy.xyza | password |
-#      | user5     | last1    | test1@dummy.xyza | password |
-#      | user6     | last2    | test2@dummy.xyza | password |
-#      | user11     | last1    | test1@dummy.xyza | password |
-#      | user22     | last2    | test2@dummy.xyza | password |
-      | user33    | last2    | test2@dummy.xyza | password     |
-#      | user44     | last2    | test2@dummy.xyza | password2 |
-      | user55    | last1    | test1@dummy.xyza | password     |
-      | user66    | last2    | test2@dummy.xyza | password     |
+#      | userINV   | last2    | test2@dummy.xyza | passwordINV  |
+      | user5     | last1    | test1@dummy.xyza | password     |
+
+  Scenario Outline: If 'INVALID' user details are provided on User Registration Page and clicked on Register Account button, user is NOT registered
+    When User details of <firstName>, <lastName>, <emailId> and <userPassword> are provided on Registration Page and clicked on Register Account Button
+    Then User Registration is failed
+
+    Examples:
+      | firstName | lastName | emailId          | userPassword |
+      | userINV   | last2    | test2@dummy.xyza | passwordINV  |
