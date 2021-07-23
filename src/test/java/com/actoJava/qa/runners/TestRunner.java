@@ -6,7 +6,7 @@ import org.testng.annotations.DataProvider;
 
 @CucumberOptions(
         features = {"src/test/resources/features"},
-        glue = {"com.actoJava.qa.stepDefinitions"},
+        glue = {"com/actoJava/qa/stepDefinitions"},
         plugin = {"pretty",
                 "com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:",
                 "timeline:test-output-thread/"}

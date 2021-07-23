@@ -32,7 +32,6 @@ public class PropertyReader {
         if (fileInputStream != null) {
             try {
                 fileInputStream.close();
-                System.out.println("Stream is cleaned up!");
             } catch (IOException ex) {
                 ex.printStackTrace();
             }

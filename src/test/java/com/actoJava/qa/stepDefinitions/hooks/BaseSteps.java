@@ -1,4 +1,4 @@
-package com.actoJava.qa.stepDefinitions.base;
+package com.actoJava.qa.stepDefinitions.hooks;
 
 import com.actoJava.qa.factory.DriverFactory;
 import com.actoJava.qa.pages.HomePage;
@@ -12,7 +12,7 @@ import org.openqa.selenium.WebDriver;
 
 import java.util.Properties;
 
-public class BaseTest {
+public class BaseSteps {
 
     // declaring all variables
     private WebDriver driver;
@@ -22,8 +22,7 @@ public class BaseTest {
 
     @Before
     public void setup() {
-        // this method will run Before each Scenario we will have
-
+        // this method will run Before each Scenario
         prop = PropertyReader.getAllProperties();
         driverFactory = new DriverFactory();
 
@@ -33,7 +32,7 @@ public class BaseTest {
 
     @After
     public void tearDown(Scenario scenario) {
-        // this method will run After each Scenario we will have
+        // this method will run After each Scenario
         if (scenario.isFailed()) {
             // take screenshot:
             String screenshotName = scenario.getName().replaceAll(" ", "_");
