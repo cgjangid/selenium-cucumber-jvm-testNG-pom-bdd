@@ -18,10 +18,6 @@ Feature: User Registration Feature
       | userINV   | lastINV  | testINV@dummy.xyza | passwordINV  |
       | user5     | last5    | test5@dummy.xyza   | password     |
 
-  Scenario Outline: If 'INVALID' user details are provided on User Registration Page and clicked on Register Account button, user is NOT registered
-    When User details of <firstName>, <lastName>, <emailId> and <userPassword> are provided on Registration Page and clicked on Register Account Button
+  Scenario: If 'INVALID' user details are provided on User Registration Page and clicked on Register Account button, user is NOT registered
+    When User details of "userINV", "last2", "test2@dummy.xyza" and "passwordINV" are provided on Registration Page and clicked on Register Account Button
     Then User Registration is failed
-
-    Examples:
-      | firstName | lastName | emailId          | userPassword |
-      | userINV   | last2    | test2@dummy.xyza | passwordINV  |

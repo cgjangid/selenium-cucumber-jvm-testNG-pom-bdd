@@ -50,8 +50,8 @@ public class LoginPage {
     }
 
     // function to navigate to User Register Page which will return a Register Page
-    public RegisterationPage navigateToRegisterPage() {
+    public RegistrationPage navigateToRegisterPage() {
         createAccountLink.click();
-        return new RegisterationPage(driver);
+        return new RegistrationPage(driver);
     }
 }

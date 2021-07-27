@@ -5,7 +5,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class RegisterationPage {
+public class RegistrationPage {
 
     // object repository for register page
     @FindBy(xpath = "/html/body/div/div/div/div/div[2]/div/div[1]/h1")
@@ -29,10 +29,10 @@ public class RegisterationPage {
     @FindBy(xpath = "/html/body/div/div/div/div/div[2]/div/form/button")
     WebElement registerButtonRegister;
 
-    WebDriver driver;
+    private WebDriver driver;
 
     // constructor with PageFactory to initiate all the page objects
-    public RegisterationPage(WebDriver driver) {
+    public RegistrationPage(WebDriver driver) {
         PageFactory.initElements(driver, this);
     }
 
